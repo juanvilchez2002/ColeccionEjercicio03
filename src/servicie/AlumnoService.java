@@ -52,10 +52,14 @@ public class AlumnoService {
         
         System.out.print("Ingrese el nombre a calcular: ");
         String nombreABuscar = consola.nextLine();
-        
+        int sumaNotas = 0;
         for(Alumno nombre: alumnos){
             if(nombre.getNombre().equalsIgnoreCase(nombreABuscar)){
                 System.out.println("encontrado");
+                for(int i=0; i<nombre.getNotas().length; i++){
+                    sumaNotas+=nombre.getNotas()[i];
+                }
+                System.out.println("El promedio de notas es: "+(sumaNotas/nombre.getNotas().length));
             }
         }
     }

@@ -12,6 +12,7 @@ public class app {
         AlumnoService as = new AlumnoService();
         
         as.crearAlumno();
+        System.out.println();
         as.notaFinal();
     }
     
